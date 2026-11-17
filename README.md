@@ -1,1 +1,33 @@
-# Agent SkillsCurated Korean writing and AI agent skills for staff engineers. Each skill is a small, reusable instruction set; review its output before publishing or acting on it.## Skills- [humanizer-ko](skills/humanizer-ko/SKILL.md): remove Korean AI-isms, double passives, translationese and unsupported hype while preserving meaning.- [korean-prose](skills/korean-prose/SKILL.md): refine Korean technical documents, pull requests and UI copy for the audience and context.- [prompt-optimizer](skills/prompt-optimizer/SKILL.md): build constraint-first prompts with data-first patterns and verifiable output requirements.- [punchcutter](skills/punchcutter/SKILL.md): turn a typeface brief into a practical, consistent generation prompt and evaluation checklist.## UseClone this repository, then copy the desired skill directories into the project skill directory used by your agent:```shgit clone https://github.com/zitrocy/agent-skills.git# Claude Codemkdir -p .claude/skills && cp -R agent-skills/skills/* .claude/skills/# Cursormkdir -p .cursor/skills && cp -R agent-skills/skills/* .cursor/skills/# Codexmkdir -p .agents/skills && cp -R agent-skills/skills/* .agents/skills/```Ask the agent to use the relevant skill by name and provide the source material and constraints. Skill discovery and invocation can vary by version; consult your agent's documentation if necessary. You can also open a `SKILL.md` and supply it as context manually.Do not send confidential material to a service without authorization. These skills are guides, not substitutes for technical, editorial, legal or design review.
+# Agent Skills
+
+Curated Korean writing and AI agent skills for staff engineers.
+
+## Skills
+
+[humanizer-ko](skills/humanizer-ko/SKILL.md): remove Korean AI-isms and hype.
+
+[korean-prose](skills/korean-prose/SKILL.md): refine technical, PR and UI copy.
+
+[prompt-optimizer](skills/prompt-optimizer/SKILL.md): constraint-first prompts.
+
+[punchcutter](skills/punchcutter/SKILL.md): custom typeface prompt helper.
+
+## Use
+
+Clone the repository and copy skills into the project directory for your agent.
+
+```sh
+git clone https://github.com/zitrocy/agent-skills.git
+# Claude Code
+mkdir -p .claude/skills && cp -R agent-skills/skills/* .claude/skills/
+# Cursor
+mkdir -p .cursor/skills && cp -R agent-skills/skills/* .cursor/skills/
+# Codex
+mkdir -p .agents/skills && cp -R agent-skills/skills/* .agents/skills/
+```
+
+Ask the agent to use the desired skill by name and provide source material and
+constraints. Discovery can vary by version; consult your agent documentation.
+You can also open a SKILL.md and supply it as context manually.
+
+Review outputs before use. Do not share confidential material without authorization.
